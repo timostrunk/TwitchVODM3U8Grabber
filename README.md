@@ -39,3 +39,7 @@ Thanks to fonsleenaars for documenting it so accurately.
 
 "out" can be any streamlike with a write function, vid is integer, quality is a video quality string. ("Low","Medium","High","Mobile",...)
 
+## TODO
+
+The library is complete in that it does what it says, however the Twitch API will change and users will have a non-working version at some point.
+Still missing is therefore meaningful error handling. If you want to include good exceptions and error messages, fork the project and send me a pull request.
