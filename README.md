@@ -6,7 +6,7 @@ Downloads and completes the m3u8 playlist for the new Twitch VOD format, which s
 2. python2 or python3
 3. ffmpeg to compile download and merge the video
 
-## Usage
+## Standalone Usage
 
     TwitchVODM3U8Grabber.py 1234567 Medium myplaylist.m3u8
 
@@ -22,3 +22,14 @@ Downloads and completes the m3u8 playlist for the new Twitch VOD format, which s
      http://www.twitch.tv/mybroadcaster/v/12345678
                                           ^^^^^^^^
                                           VIDEO_ID
+
+## Usage as a python library
+    from TwitchVODM3U8Grabber import TwitchVODM3UGrabber
+
+    quality = "Medium"
+    vid = 1234567
+    with open("out.m3u8",'w') as out:
+        TwitchVODM3UGrabber.get_completed_m3u_playlist(vid,quality,out)
+
+"out" can be any streamlike with a write function, vid is integer, quality is a video quality string. ("Low","Medium","High","Mobile",...)
+
